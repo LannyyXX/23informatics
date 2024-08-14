@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background: url("lb.webp") no-repeat center center/cover;
+  color: #fff;
+  padding: 100px 0; /* Memberikan ruang lebih untuk logo */
+  text-align: center;
+  position: relative;
+}
+
+/* Logo styles */
+.logo {
+  display: block;
+  margin: 0 auto 20px auto; /* Menempatkan logo di tengah dengan margin bawah */
+  width: 200px; /* Sesuaikan ukuran logo */
+  height: auto;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+header h3 {
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-style: italic;
+  animation: fadeInDown 2s ease-in-out;
+}
+
+/* Navigation styles */
+nav {
+  background: #333; /* Warna latar belakang navigasi */
+  color: #fff; /* Warna teks */
+  padding: 15px; /* Ruang di dalam navigasi */
+  position: sticky; /* Menjaga navigasi tetap di atas saat scroll */
+  top: 0; /* Posisi atas */
+  z-index: 1000; /* Memastikan navigasi berada di atas elemen lainnya */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan di bawah navigasi */
+}
+
+nav ul {
+  display: flex; /* Menampilkan item dalam satu baris */
+  justify-content: center; /* Menempatkan item di tengah */
+  list-style: none; /* Menghapus bullet points */
+  padding: 0; /* Menghapus padding */
+}
+
+nav ul li {
+  margin: 0 15px; /* Jarak antar item */
+}
+
+nav ul li a {
+  color: #fff; /* Warna teks tautan */
+  text-decoration: none; /* Menghapus garis bawah pada tautan */
+  font-weight: bold; /* Membuat teks tebal */
+  transition: color 0.3s ease; /* Transisi saat hover */
+}
+
+nav ul li a:hover {
+  color: #fc5c7d; /* Warna saat hover */
+}
+
+/* Section styles */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h1,
+.section h2,
+.section h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.section p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.welcome-section {
+  background: linear-gradient(
+    135deg,
+    #008080,
+    #ffffff
+  ); /* Gradasi Biru Teal ke Putih */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  color: #333; /* Warna teks gelap untuk kontras */
+}
+
+.welcome-section p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Activity List styles */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity-item {
+  background: #fc5c7d;
+  color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  width: 80%;
+  text-align: center;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.activity-item:hover {
+  background: #6a82fb;
+}
+
+/* Gallery styles */
+#gallery {
+  background: linear-gradient(
+    135deg,
+    #43cea2,
+    #185a9d
+  ); /* Gradasi warna latar belakang */
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#gallery h2 {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#gallery h4 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Post styles */
+.blog-post {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h2 {
+  color: #6a82fb;
+}
+
+.blog-post h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-top: 10px;
+}
+
+.blog-post img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.blog-post img:hover {
+  transform: scale(1.05);
+}
+
+/* Team styles */
+.section {
+  padding: 40px;
+  border-radius: 10px; /* Rounded corners for modern look */
+}
+
+#team {
+  background: linear-gradient(
+    135deg,
+    #a2c2e1,
+    #7ec0fa
+  ); /* Gradasi warna biru */
+  color: #333; /* Warna teks */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  margin: 20px;
+  animation: fadeInUp 1.5s ease-in-out;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.8); /* Background white with transparency */
+  padding: 20px; /* Add padding for content */
+  border-radius: 10px; /* Rounded corners for team members */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for team members */
+}
+
+.team-member img {
+  width: 140px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Student List styles */
+
+.student {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.student-list {
+  text-align: center;
+  margin: 10px;
+  padding: 15px;
+  background-color: #7ec0fa; /* Warna latar belakang yang lembut */
+  border-radius: 10px;
+  width: 150px; /* Atur lebar kotak */
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.student-list img {
+  width: 120px;
+  height: auto;
+  border-radius: 45%; /* Membuat gambar menjadi bulat */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-list img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.student-list p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #333;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social-media {
+  text-align: center; /* Menempatkan ikon sosial di tengah */
+  margin: 20px 0; /* Jarak antara navigasi dan footer */
+}
+
+.social-media a {
+  color: #e1306c; /* Warna khas Instagram */
+  font-size: 30px; /* Ukuran ikon */
+  margin: 0 15px; /* Jarak antara ikon */
+  transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.social-media a:hover {
+  transform: scale(1.1); /* Zoom saat hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .activity-item {
+    width: 90%;
+  }
+
+  .gallery img {
+    width: 200px;
+    height: 150px;
+  }
+
+  .student-list {
+    width: 120px;
+  }
+
+  .student-list img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header h2 {
+    font-size: 1.2em;
+  }
+
+  header h3 {
+    font-size: 1em;
+  }
+
+  .section {
+    padding: 30px 10px;
+  }
+
+  .welcome-section p {
+    font-size: 1em;
+  }
+
+  .gallery img {
+    width: 150px;
+    height: 100px;
+  }
+
+  .student-list {
+    width: 100px;
+  }
+
+  .student-list img {
+    width: 80px;
+  }
+}
